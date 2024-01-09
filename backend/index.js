@@ -7,7 +7,10 @@ connectDB();
 
 app.get('/',(req,res)=> {
     res.send("Namaste Duniya!");
-})
+});
+
+app.use(express.json());
+app.use("/api", require("./routes/CreateUser"));
 
 app.listen(port,() => {
     console.log(`Running on port ${port}`);
