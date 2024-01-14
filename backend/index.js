@@ -20,6 +20,7 @@ app.use((req,res,next) => {
 
 app.use(express.json());
 app.use("/api", require("./routes/CreateUser"));
+app.use("/api",require("./routes/CreateFood"));
 
 
 app.listen(port,() => {
