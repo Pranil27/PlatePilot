@@ -15,12 +15,12 @@ const connectDB=async()=>{
             arr.push(item);
         })
         global.food_items = arr;
-        console.log(global.food_items);
+        //console.log(global.food_items);
         await fetched_food_category.find().then( (item) => {
             arr.push(item);
         })
         global.food_category = arr;
-        console.log(global.food_category);
+        //console.log(global.food_category);
         
     } 
     catch(err)

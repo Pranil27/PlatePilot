@@ -3,8 +3,10 @@
 #Environments
 config.env
 
+
 # dependencies
 /node_modules
+/vars
 /.pnp
 .pnp.js
 

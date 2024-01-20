@@ -1,5 +1,5 @@
 const express = require("express");
-require('dotenv').config();
+require('dotenv').config({path : './vars/.env'});
 const app = express();
 const port=process.env.PORT;
 const connectDB= require('./db');
@@ -21,7 +21,7 @@ app.use((req,res,next) => {
 app.use(express.json());
 app.use("/api", require("./routes/CreateUser"));
 app.use("/api",require("./routes/CreateFood"));
-
+app.use("/api",require("./routes/CreateOrder"));
 
 app.listen(port,() => {
     console.log(`Running on port ${port}`);
